@@ -24,3 +24,4 @@ COPY ./pyproject.toml ./poetry.lock* /usr/src/app/
 RUN poetry install
 
 COPY . /usr/src/app/
+
