@@ -1,9 +1,5 @@
-from ninja import Schema
+from ninja.orm import create_schema
+from .models import User
 
+UserOut = create_schema(User, fields=['id', 'username', 'avatar'])
 
-class UserOut(Schema):
-    id: int
-    # first_name: str
-    # last_name: str
-    username: str
-    avatar: str
