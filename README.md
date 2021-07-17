@@ -20,11 +20,20 @@
     POSTGRES_HOST=ninjadb
     POSTGRES_PORT=5432
 
+    GOOGLE_CLIENT_ID=ваш client_id
+    GOOGLE_SECRET_KEY=ваш secret_key
+
+
 ##### 3) Запустить контейнер
 
     docker-compose up --build
 
-#### 4) Демо
+#### Google авторизация 
+
+    http://localhost:8000/api/v1/auth/
+
+#### Ручной старт сервера
+
     uvicorn config.asgi:application --reload
     
 
