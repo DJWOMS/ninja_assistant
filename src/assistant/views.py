@@ -5,15 +5,15 @@ from ninja import Router
 from .schemas import WordBase, WordOut
 from .models import Word
 
-from src.users.models import User
+from ..auth.services.jwt_service import AuthBearer
 
-assistant_router = Router()
+assistant_router = Router(tags=['assistant'])
 
 
-@assistant_router.post("/", response=WordOut)
-async def create_word(request, payload: WordBase):
-    _user = await sync_to_async(User.objects.get)(id=1)
-    return await sync_to_async(Word.objects.create, thread_sensitive=True)(user=_user, **payload.dict())
+@assistant_router.post("/", response=WordOut, auth=AuthBearer())
+def create_word(request, payload: WordBase):
+    # print('view', request.auth)
+    return Word.objects.create(user=request.auth, **payload.dict())
 
 
 @assistant_router.get("/", response=List[WordOut])
