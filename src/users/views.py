@@ -7,7 +7,7 @@ from src.users.models import User
 from src.users.schemas import UserOut
 
 
-user_router = Router()
+user_router = Router(tags=['user'])
 
 
 @user_router.get("/", response=List[UserOut])

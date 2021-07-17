@@ -9,4 +9,11 @@ class GoogleAuth(Schema):
 
 class Token(Schema):
     id: int
-    token: str
+    access_token: str
+    token_type: str
+
+
+class TokenAuth(Schema):
+    id: int
+    exp: str
+    sub: str

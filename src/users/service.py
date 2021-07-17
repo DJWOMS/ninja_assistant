@@ -6,7 +6,6 @@ import requests
 from django.conf import settings
 
 from django.contrib.auth import get_user_model
-from django.core.files.base import ContentFile
 from django.core.files.images import ImageFile
 
 from src.auth import schemas
