@@ -14,5 +14,11 @@ class WordAdmin(admin.ModelAdmin):
     list_display_links = ['word_en']
 
 
+@admin.register(models.Correction)
+class CorrectionAdmin(admin.ModelAdmin):
+    list_display = ['id', 'word', 'user', 'create_at']
+    list_display_links = ['word']
+
+
 admin.site.register(models.Genre)
-admin.site.register(models.Correction)
+
