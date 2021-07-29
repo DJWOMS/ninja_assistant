@@ -18,7 +18,7 @@ api.add_router("assistant/", assistant_router)
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('api/v1/admin/', admin.site.urls),
     path("api/v1/", api.urls),
 ]
 

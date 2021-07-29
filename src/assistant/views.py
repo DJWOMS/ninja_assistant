@@ -24,7 +24,7 @@ def create_word(request, payload: schemas.WordCreate):
 
 @assistant_router.get("/word", response=List[schemas.WordOut])
 def get_word_list(request, filters: schemas.Filters = Query(...)):
-    return Word.objects.select_related('user', 'game').filter(**filters.dict(exclude_none=True))
+    return Word.objects.select_related('game').filter(**filters.dict(exclude_none=True))
 
 
 @assistant_router.get("/word/{pk}", response=schemas.WordSingleOut)

@@ -15,7 +15,6 @@ class GameOut(Game):
 class WordBase(Schema):
     word_en: str
     word_ru: str
-    definition: str
 
 
 class WordCreate(WordBase):
@@ -25,7 +24,7 @@ class WordCreate(WordBase):
 class WordOut(WordBase):
     id: int
     game: Game
-    definition: str = None
+    image: str = None
 
 
 class WordSingleOut(WordBase):
@@ -34,6 +33,7 @@ class WordSingleOut(WordBase):
     user: UserOut
     create_at: datetime
     update_at: datetime
+    definition: str
 
 
 class Filters(Schema):

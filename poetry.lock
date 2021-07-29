@@ -73,6 +73,17 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+name = "django-cors-headers"
+version = "3.7.0"
+description = "django-cors-headers is a Django application for handling the server headers required for Cross-Origin Resource Sharing (CORS)."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+Django = ">=2.2"
+
+[[package]]
 name = "django-ninja"
 version = "0.13.2"
 description = "Django Ninja - Fast Django REST framework"
@@ -280,7 +291,7 @@ standard = ["websockets (>=9.1)", "httptools (>=0.2.0,<0.3.0)", "watchgod (>=0.6
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "166dfe9c291fe8f8091789c13f4dee2fe1e7ac44f9a406a1ffcc63c601a47cb6"
+content-hash = "079ecb0ea4709240e38e5b9cf252325a068a33ff7a3ef7c4b178d77296068800"
 
 [metadata.files]
 asgiref = [
@@ -310,6 +321,10 @@ colorama = [
 django = [
     {file = "Django-3.2.5-py3-none-any.whl", hash = "sha256:c58b5f19c5ae0afe6d75cbdd7df561e6eb929339985dbbda2565e1cabb19a62e"},
     {file = "Django-3.2.5.tar.gz", hash = "sha256:3da05fea54fdec2315b54a563d5b59f3b4e2b1e69c3a5841dda35019c01855cd"},
+]
+django-cors-headers = [
+    {file = "django-cors-headers-3.7.0.tar.gz", hash = "sha256:96069c4aaacace786a34ee7894ff680780ec2644e4268b31181044410fecd12e"},
+    {file = "django_cors_headers-3.7.0-py3-none-any.whl", hash = "sha256:1ac2b1213de75a251e2ba04448da15f99bcfcbe164288ae6b5ff929dc49b372f"},
 ]
 django-ninja = [
     {file = "django-ninja-0.13.2.tar.gz", hash = "sha256:02526074539d4308135f5540276e52311a70b67bfb690e5aff750a7370ae6503"},
